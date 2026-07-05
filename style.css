@@ -1,0 +1,563 @@
+:root {
+  --pri: #111822;
+  --sec: #333740;
+  --tri1: #6C6A6A;
+  --tri2: #745850;
+  transition: all ease 0.4s;
+}
+
+@font-face {
+  font-family: aeonik;
+  font-weight: 200;
+  src: url(./Aeonik-Light.ttf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 500;
+  src: url(./Aeonik-Regular.ttf);
+}
+@font-face {
+  font-family: aeonik;
+  font-weight: 700;
+  src: url(./Aeonik-Bold.ttf);
+}
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: aeonik;
+  color: white;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--pri);
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--pri);
+}
+
+nav {
+  position: fixed;
+  margin: 20px 14px;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 99%;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--tri1);
+  border-bottom: var(--tri1) 2px solid;
+  border-radius: 20px;
+  z-index: 10;
+}
+nav .button {
+  display: flex;
+  width: 70px;
+  height: auto;
+  padding: 10px 10px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: var(--pri);
+  position: relative;
+}
+nav .button div {
+  width: 30px;
+  height: 30px;
+  left: 0%;
+  margin: 10px 5px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: var(--tri1);
+  transition: all ease 0.4s;
+}
+nav .button #sun {
+  z-index: 1;
+}
+nav .button #moon {
+  z-index: 2;
+}
+
+section.allElems {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  margin-top: 100px;
+  background-color: var(--pri);
+  box-shadow: 5px 5px 5px black;
+}
+section.allElems header {
+  width: 100%;
+  height: 300px;
+  background: url("https://images.unsplash.com/photo-1566054757965-8c4085344c96?q=80&w=1165&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px;
+}
+section.allElems header .header1 h1 {
+  font-weight: 500;
+  outline: #222831;
+  font-size: 100px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+section.allElems header .header1 h4 {
+  color: #000000;
+  font-weight: 500;
+  font-size: 100px;
+}
+section.allElems header .header2 h2 {
+  font-weight: 700;
+  color: #222831;
+  font-size: 40px;
+}
+section.allElems header .header2 h2 sup {
+  color: #222831;
+  font-weight: 700;
+  font-size: 20px;
+}
+section.allElems header .header2 h4 {
+  color: #222831;
+  font-weight: 500;
+  font-size: 30px;
+}
+section.allElems header .header2 h3 {
+  font-weight: 500;
+  font-size: 25px;
+}
+section.allElems .allFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 35px;
+}
+section.allElems .elem {
+  font-family: aeonik;
+  font-weight: 500;
+  background-color: #ffd369;
+  position: relative;
+  height: 400px;
+  width: 330px;
+  font-size: 22px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all ease-in 0.3s;
+}
+section.allElems .elem img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+section.allElems .elem h2 {
+  position: absolute;
+  bottom: 4%;
+  right: 5%;
+}
+section.allElems .elem:active {
+  scale: 0.95;
+}
+
+section.fullElem {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: var(--pri);
+  padding: 20px;
+  display: none;
+  margin-top: 100px;
+}
+section.fullElem .back {
+  position: absolute;
+  right: 5%;
+  top: 5.5%;
+  width: 100px;
+  height: 30px;
+  background-color: red;
+  border-radius: 20px;
+  padding: 0px 20px;
+  border: none;
+  transition: all ease 0.3s;
+  font-size: 15px;
+}
+section.fullElem .back:active {
+  scale: 0.95;
+}
+
+.todo-list-fp h2 {
+  font-size: 60px;
+}
+.todo-list-fp .todo-container {
+  height: 80%;
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo-list-fp .addTask {
+  width: 33%;
+  height: 100%;
+  background-color: var(--sec);
+  border-radius: 20px;
+}
+.todo-list-fp .addTask form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 30px;
+}
+.todo-list-fp .addTask form input {
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--pri);
+  border: 0;
+  outline: none;
+}
+.todo-list-fp .addTask form input::-moz-placeholder {
+  color: white;
+  font-size: 20px;
+}
+.todo-list-fp .addTask form input::placeholder {
+  color: white;
+  font-size: 20px;
+}
+.todo-list-fp .addTask form textarea {
+  background-color: var(--pri);
+  width: 100%;
+  padding: 10px 20px;
+  height: 400px;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+}
+.todo-list-fp .addTask form textarea::-moz-placeholder {
+  color: white;
+  font-size: 20px;
+}
+.todo-list-fp .addTask form textarea::placeholder {
+  color: white;
+  font-size: 20px;
+}
+.todo-list-fp .addTask form button {
+  background-color: var(--tri1);
+  padding: 10px 20px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  transition: all ease 0.3s;
+}
+.todo-list-fp .addTask form button:active {
+  scale: 0.95;
+}
+.todo-list-fp .addTask form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+  width: 100%;
+  height: 20px;
+}
+.todo-list-fp .addTask form .checkbox #checkbox {
+  width: 10px;
+  scale: 1.2;
+}
+.todo-list-fp .allTask {
+  width: 65%;
+  height: 100%;
+  background-color: var(--sec);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px;
+  overflow: auto;
+  gap: 10px;
+}
+.todo-list-fp .allTask span {
+  width: 10px;
+  height: 90px;
+  padding: 2px 4px;
+  border-radius: 30px;
+  background-color: red;
+  margin-left: 10px;
+  font-size: 12px;
+}
+.todo-list-fp .allTask span.true {
+  opacity: 1;
+}
+.todo-list-fp .allTask span.false {
+  display: none;
+}
+.todo-list-fp .allTask .task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  padding: 0px 15px;
+  background-color: var(--pri);
+  border-radius: 20px;
+}
+.todo-list-fp .allTask .task h3 button {
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  margin-left: 5px;
+  transform: translateY(2px);
+  border-radius: 50%;
+  background-color: var(--sec);
+}
+.todo-list-fp .allTask .task .complete {
+  padding: 5px 10px;
+  background-color: var(--tri1);
+  border: none;
+  border-radius: 5px;
+  transition: 0.5s all ease;
+}
+.todo-list-fp .allTask .task button:active {
+  scale: 0.95;
+}
+.todo-list-fp .detailsss {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  gap: 5px;
+  width: 100%;
+  aspect-ratio: 1/0.2;
+  padding: 0px 15px;
+  background-color: var(--pri);
+  border-radius: 10px;
+}
+.todo-list-fp .detailsss h3 {
+  padding: 10px 10px;
+}
+.todo-list-fp .detailsss h3 i {
+  transition: 0.3s;
+}
+.todo-list-fp .detailsss h4 {
+  padding: 10px 10px;
+}
+.todo-list-fp .detailsss i:active {
+  transform: rotate3d(0, 1, 0, 180deg);
+}
+.todo-list-fp .alldetails {
+  display: none;
+  animation: show 0.5s linear both;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.daily-planner-fp {
+  display: block;
+}
+.daily-planner-fp h2 {
+  font-size: 70px;
+}
+.daily-planner-fp .day-planner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--sec);
+  height: 85%;
+  margin-top: 40px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  overflow: auto;
+}
+.daily-planner-fp .day-planner-time {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 49%;
+  margin-bottom: 15px;
+}
+.daily-planner-fp .day-planner-time input {
+  padding: 20px 45px;
+  width: 100%;
+  background-color: #222831;
+  border-radius: 5px;
+  border: none;
+  font-size: 31px;
+  padding-top: 34px;
+  outline: none;
+}
+.daily-planner-fp .day-planner-time p {
+  color: var(--tri1);
+  position: absolute;
+  top: 12%;
+  left: 1%;
+  font-size: 18px;
+}
+
+.motivation-fp {
+  position: relative;
+}
+.motivation-fp .motivation-container::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--tri2);
+  border-radius: 50px;
+  scale: 1;
+  filter: blur(150px);
+  z-index: 8;
+}
+.motivation-fp .motivation-container {
+  height: 500px;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  border-radius: 50px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.motivation-fp .motivation-container .motivation-wrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  padding: 17px;
+  background-color: var(--pri);
+  border-radius: 40px;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-1 {
+  background-color: var(--tri2);
+  border-radius: 30px;
+  display: flex;
+  justify-content: flex-start;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-1 img {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  opacity: 0.7;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-1 {
+  padding: 30px;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-1 h2 {
+  font-size: 40px;
+  color: var(--sec);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-2 {
+  margin-top: 40px;
+  padding: 20px;
+}
+.motivation-fp .motivation-container .motivation-wrapper .motivation-2 h1 {
+  font-weight: 700px;
+  font-size: 40px;
+}
+.motivation-fp .motivation-3 {
+  margin-top: 30px;
+  display: flex;
+  justify-content: flex-end;
+}
+.motivation-fp .motivation-3 h2 {
+  background-color: var(--tri2);
+  border-radius: 40px;
+  font-size: 30px;
+  padding: 20px;
+  color: var(--sec);
+}
+
+.pomodoro-fp {
+  position: relative;
+}
+.pomodoro-fp h2 {
+  font-size: 65px;
+}
+.pomodoro-fp h1 {
+  font-size: 160px;
+  margin-bottom: 20px;
+}
+.pomodoro-fp .pomo-timer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.pomodoro-fp .pomo-timer h2 {
+  position: absolute;
+  top: -30%;
+  left: 27%;
+  background-color: #519872;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 7px 5px 0px rgb(8, 8, 8);
+  transform: all ease 0.3s;
+}
+.pomodoro-fp .pomo-timer h2:active {
+  scale: 0.95;
+  box-shadow: 0px 0px 0px black;
+}
+.pomodoro-fp button {
+  width: 100px;
+  height: 50px;
+  margin-right: 30px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: all ease 0.3s;
+  box-shadow: 7px 5px 0px rgb(8, 8, 8);
+}
+.pomodoro-fp button:active {
+  scale: 0.95;
+  box-shadow: 0px 0px 0px black;
+}
+.pomodoro-fp .start {
+  background-color: #519872;
+}
+.pomodoro-fp .pause {
+  background-color: #f9b006;
+}
+.pomodoro-fp .reset {
+  background-color: red;
+}
+
+@keyframes change {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+#circle:active {
+  animation: change duration timing-function delay iteration-count direction;
+}/*# sourceMappingURL=style.css.map */
