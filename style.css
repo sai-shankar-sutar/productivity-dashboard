@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --pri: #111822;
   --sec: #333740;
@@ -10,17 +9,17 @@
 @font-face {
   font-family: aeonik;
   font-weight: 200;
-  src: url(fonts®onik-light.ttf);
+  src: url(lighttxt.ttf);
 }
 @font-face {
   font-family: aeonik;
   font-weight: 500;
-  src: url(fonts®onik-regular.ttf);
+  src: url(regular.ttf);
 }
 @font-face {
   font-family: aeonik;
   font-weight: 700;
-  src: url(fonts®onik-bold.ttf);
+  src: url(boldtxt.ttf);
 }
 * {
   padding: 0%;
