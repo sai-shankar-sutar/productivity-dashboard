@@ -295,7 +295,8 @@ function weatherFunctionality() {
     var data = null
 
     async function weatherAPICall() {
-        var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=5a762dd80e4942b9a08163622252606&q=${city}`)
+        let keys="5a762dd80e4942b9a08163622252606&q"
+        var response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${keys}=${city}`)
         data = await response.json()
 
         header2Temp.innerHTML = `${data.current.temp_c}°C`
